@@ -20,7 +20,7 @@ def OpenAi(prompt):
       "role":
       "system",
       "content":
-      "You are Change Management expert working in a telecomunication company."
+      "You are a virtual assistant working for a telecomunication company."
     }, {
       "role": "user",
       "content": prompt
