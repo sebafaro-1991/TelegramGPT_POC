@@ -3,14 +3,17 @@ import os
 import telebot
 import openai
 
-#Get the toke that we saved in the secrets
+#Get the telegram token that we saved in the secrets
 BOT_TOKEN = os.environ.get('TOKEN')
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
 
 def OpenAi(prompt):
+  #Get the OpenAI token that we saved in the secrets
   openai.api_key = os.getenv("OPENAI_API_KEY")
+
+  #OpenAI doc https://platform.openai.com/docs/api-reference/chat/create
   response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo-0301",
     messages=[{
